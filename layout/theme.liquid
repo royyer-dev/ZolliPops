@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#E10E86">
+    <link rel="canonical" href="{{ canonical_url }}">
+    
+    <title>{{ page_title }} | Zolli Pops México</title>
+
+    <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+    {{ content_for_header }}
+  </head>
+
+  <body>
+    {% section 'header' %}
+
+    <main role="main" id="MainContent">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+  </body>
+</html>

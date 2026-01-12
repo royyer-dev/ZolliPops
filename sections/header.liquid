@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="container header-wrapper">
+    <div class="logo">
+      <a href="/">
+        <img src="{{ 'logo.png' | asset_url }}" alt="Zolli Pops Logo" width="150" height="50">
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="/" class="nav-link">Inicio</a></li>
+        <li><a href="/collections/hard-candy" class="nav-link">Productos</a></li>
+        <li><a href="/pages/distribuidores" class="nav-link btn btn-secondary" style="color:white; padding:8px 16px;">Ser Distribuidor</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": []
+}
+{% endschema %}

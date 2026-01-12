@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>¡Gracias! | Zolli Pops</title>
+  <link rel="stylesheet" href="assets/theme.css" />
+  <style>
+    /* Specific styles for Thanks page to ensure centering */
+    .page-thanks {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #FFF0F5 0%, #E6F7FF 100%);
+      padding: 20px;
+    }
+
+    .card-thanks {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      padding: 60px 40px;
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    .icon-success {
+      font-size: 80px;
+      line-height: 1;
+      margin-bottom: 24px;
+      display: inline-block;
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s both;
+    }
+
+    .h1-thanks {
+      font-size: 2.5rem;
+      color: var(--color-primary);
+      margin-bottom: 16px;
+    }
+
+    .p-thanks {
+      font-size: 1.2rem;
+      color: var(--color-text);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: var(--color-secondary);
+      font-weight: 800;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page-thanks">
+    <div class="card-thanks">
+      <div class="icon-success">🎉</div>
+      <h1 class="h1-thanks">¡Solicitud Recibida!</h1>
+      <p class="p-thanks">
+        Gracias por tu interés en distribuir Zolli Pops.
+        <br><br>
+        Un asesor comercial te contactará en un lapso <span class="highlight">menor a 12 horas</span> para darte
+        seguimiento.
+      </p>
+
+      <a class="btn" href="/">Volver al Inicio</a>
+    </div>
+  </main>
+</body>
+
+</html>

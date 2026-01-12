@@ -1,0 +1,23 @@
+<div class="product-card">
+  {% if product.compare_at_price > product.price %}
+    <span class="badge-sale">OFERTA</span>
+  {% endif %}
+  <div class="product-image-wrapper">
+    <a href="{{ product.url }}">
+      <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" class="product-image" loading="lazy">
+    </a>
+  </div>
+  <div class="product-info">
+    <h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+    <div class="product-price">
+      {{ product.price | money }}
+      {% if product.compare_at_price > product.price %}
+        <s style="color:#999; font-size:0.9em; font-weight:normal;">{{ product.compare_at_price | money }}</s>
+      {% endif %}
+    </div>
+    <form method="post" action="/cart/add">
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+      <button type="submit" class="btn btn-secondary" style="width:100%; font-size:0.9rem;">Agregar</button>
+    </form>
+  </div>
+</div>
